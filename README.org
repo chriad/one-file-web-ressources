@@ -1,1 +1,6 @@
 Various (mostly single file) ressources that I found all over the internet and that I'd like to have a local copy of.
+
+
+for html wrapped text:
+
+w3m -dump https://gcc.gnu.org/onlinedocs/gcc-4.8.5/gnat_ugn_unw/Basic-Assembler-Syntax.html

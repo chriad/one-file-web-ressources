@@ -1,0 +1,2 @@
+# browse in terminal
+links2 ./data/www.quitsendingmetrash.com/index.html

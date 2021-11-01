@@ -1,5 +1,4 @@
-Various (mostly single file) ressources that I found all over the internet and that I'd like to have a local copy of.
-
+Curated list of (mostly single file) ressources like cheat-sheets that I found all over the internet and that I'd like to have a local copy of.
 
 for html wrapped text:
 

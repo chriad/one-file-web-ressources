@@ -1,0 +1,790 @@
+(in-package :lml)
+
+;; (lml-load "mylml.lml")
+(initialize-section)
+
+(page format-func 
+  :|XML:LANG| "ja"
+  (head 
+    (meta-default)
+    (use-stylesheet "css/default.css")
+    (title "format関数"))
+  (body 
+    (h1 "Common Lispのformat関数")
+    ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ;; 前置き
+    (p
+      [Common Lisp では，フォーマット出力用の関数として
+      ,(code "format") が用意されています．]
+      [巨大な Common Lisp の仕様の中でも特に複雑な組み込み関数の1つであり，]
+      [中には冗談としか思えない機能もあったりします．]
+      [Common Lisp使いの人でも，完全に使いこなしているという人は]
+      [少ないのではないでしょうか．,(br)]
+      [ということで，,(code "format")関数の使い方を]
+      [自分でまとめて整理したものを公開します．])
+    (p
+      [今まで ,(code "~S") と ,(code "~A") と ,(code" ~%")] 
+      [くらいしか使ったことがないという人は参考にしてみてください．]
+      [ざっとネット上を検索したところ，仕様書以外で]
+      [使い方を解説しているドキュメントは]
+      [（少なくとも日本語では）見当たらないので，少しは需要があるのでは．])
+    (p
+      [(参考文献)]
+      (alink "http://www.lispworks.com/documentation/HyperSpec/Body/22_c.htm"
+	(cite "Common Lisp HyperSpec (22.3 Formatted Output)")) "："
+      [処理系が準拠している仕様のバージョンによって，]
+      [挙動などが違ってくるかもしれません．])
+    (hr)
+    ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ;; 更新履歴
+    (ul
+      (li [2005/02/25 とりあえず公開．今後使用例などを書き足していく予定．]))
+    (hr)
+    ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ;; 基本事項
+    (h2 "基本事項")
+    (p "書式： "
+       (code "(format ") (var "destination") " " (var "control-sequence") " "
+       (var "arg" (sub "0")) " ... " (var "arg" (sub "n")) (code ")"))
+    (ul
+      (li (var "destination") "："
+	  "出力先を指定する．"
+	  (ul 
+	    (li "明示的に出力ストリームを指定すると，そこに出力．")
+	    (li (code "t") "にすると標準出力" 
+		(code "（*standard-output*）") "に出力．")
+	    (li (code "nil") "にするとストリームには出力せず，"
+		"出力を返り値（文字列）として返す．")
+	    (li "fill pointer付き文字列にすると，"
+		"出力をその文字列に追加する．")))
+      (li (var "control-sequence") "："
+	  "出力文字列．"
+	  "文字列中のformatディレクティブ（Cの" (code "printf") 
+	  "における" (code "%d") "などのようなもの．詳細は後述）"
+	  "は特別な意味を持つ．")
+      (li (var "arg" (sub "0")) " ... " (var "arg" (sub "n")) "："
+	  "それぞれの値が，基本的には前から順に消費され，"
+	  "formatディレクティブの出力などに利用される．"))
+    (p "戻り値： "
+       (var "destination") "が非" (code "nil") "のときは" (code "nil") "，"
+       (var "destination") "が" (code "nil") "のときは出力文字列．")
+    (hr)
+    ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ;; formatディレクティブの基本
+    (h2 "formatディレクティブの共通事項")
+    (p (code "format") "の引数" (var "control-sequence") "の文字列中の"
+       "以下の並びは" (em "formatディレクティブ") "として扱われ，"
+       "特別な意味を持つ．")
+    (p-indent
+	1
+      (code "~") 
+      "[" "[" (var "パラメータ" (sub "1")) "]" (code ",") "]"
+      "[" "[" (var "パラメータ" (sub "2")) "]" (code ",") "]" " ... "
+      "[" (var "パラメータ" (sub "n")) "]"
+      "[" (code ":") "]"
+      "[" (code "@") "]"
+      (var "ディレクティブ指定文字"))
+
+    (p "各" (var "パラメータ") "には以下のいずれかを指定する．省略も可．")
+    (ul
+      (li "整数")
+      (li (code "'") (var "文字") "： "
+	  "文字をパラメータにしたい場合．")
+      (li (code "V") (paren "または" (code "v")) "： "
+	  "次の" (var "arg") "を消費して，その値をパラメータにする．")
+      (li (code "#") "： "
+	  (var "arg") "の残り数をパラメータにする．"))
+    (p (colon-mod) "や" (at-mod) "の" (em "修飾子") "は，"
+       "ディレクティブの振る舞いを変化させる．"
+       "どのように変化するかはディレクティブごとに違う．")
+    (p (var "ディレクティブ指定文字") 
+       "はこれから説明するアルファベットや記号のいずれか．"
+       "大文字小文字は区別されない．")
+
+    (hr)
+    (h2 "各formatディレクティブの説明")
+    ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ;; 単純なもの
+    (section "単純な出力"
+      (f-directive 
+       #\%
+       :meaning "Newline" :use-arg 0 :param '("n")
+       :description 
+       '([改行,(paren (code "#\\Newline"))を出力．]
+	 [,(var "n")を指定すると,(var "n")回改行する．]
+	 (lsp-example (format nil "~%abc~%def~3%ghi"))) )
+      (f-directive
+       "&amp;"
+       :meaning "Fresh-Line" :use-arg 0 :param '("n")
+       :description
+       '([,(code "fresh-line")関数を呼ぶ．つまり，現在のカーソルの位置が]
+	 [行の先頭でなければ改行,(paren (code "#\\Newline"))] 
+	 [を出力する．,(br)]
+	 [,(var "n")を指定すると，,(code "fresh-line")を1回呼んだあと，]
+	 [(,(var "n")-1) 個の改行を出力する．]
+	 [,(var "n")が0のときはなにもしない．]
+	 (lsp-example (format nil "~&abc~&def~3&ghi"))))
+      (f-directive
+       #\|
+       :meaning "Page" :use-arg 0 :param '("n")
+       :description 
+       '([改ページ,(paren (code "#\\Page"))を出力．]
+	 [,(var "n")を指定すると,(var "n")個の改ページを出力する．]
+         (lsp-example
+          (coerce (format nil "~4|") 'list))
+         ))
+      (f-directive
+       #\~
+       :meaning "Tilde" :use-arg 0 :param '("n")
+       :description
+       '([チルダ,(squote (code "~"))を出力する．]
+         [,(var "n")を指定すると,(var "n")個のチルダを出力する．]
+	 (lsp-example (format nil "~10~")) ))
+      )
+    ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ;; 値の出力
+    (section "引数の値を出力"
+      ;; 値の出力（汎用）
+      (section "汎用"
+	(f-directive
+	 #\A
+	 :meaning "Aesthetic" :use-arg 1
+	 :param '( "mincol" "colinc" "minpad" "padchar")
+	 :description
+	 '([消費した,(var "arg")の値を]
+	   [,(code "princ")関数の方法で出力する．]
+	   [たとえば文字列の場合，前後のダブルクォートは出力されない．,(br)]
+	   [空リストは,(dquote (samp "nil"))と出力されるが，]
+           [修飾子,(colon-mod)をつけておくと]
+	   [,(dquote (samp "()"))と出力されるようになる．,(br)]
+           (lsp-example
+            (format nil "~A ~A ~A ~A~%~A"
+	     123 "abc" 'def #\x (find-package "CL"))
+            (format nil "~A ~:A" nil nil))
+           [,(var "minpad")を指定すると，右側]
+	   (paren [修飾子,(at-mod)があると左側])
+	   [に,(var "minpad")個の]
+	   [,(var "padchar"),(paren "デフォルトは空白")を表示する．,(br)]
+	   [,(var "mincol")を指定すると，]
+	   [出力が,(var "mincol")文字に満たない場合，]
+	   [その文字数以上になるまで,(var "padchar")を]
+	   [,(var "colinc")文字ずつ出力する．]
+           (lsp-example
+            (format nil "ABC~,,3A123~,,3@A" "pqr" "xyz")
+            (format nil "ABC~,,3,'@A123~,,3,'*@A" "pqr" "xyz")
+            (format nil "~10,,,'-A" '(a "B"))
+            (format nil "~10,4,,'-A" '(a "B"))
+            (format nil "~10,4,1,'-@A" '(a "B")))
+           ))
+    
+	(f-directive
+	 #\S
+	 :meaning "Standard" :use-arg 1
+	 :param '( "mincol" "colinc" "minpad" "padchar")
+	 :description
+	 '([消費した,(var "arg")の値を]
+	   [,(code "prin1")関数の方法で出力する．]
+	   [たとえば文字列の場合，前後のダブルクォートも出力される．]
+	   [修飾子やパラメータの意味は,(code "~A")と同じ．]
+           (lsp-example
+            (format nil "~S ~S ~S ~S~%~S"
+	     123 "abc" 'def #\x (find-package "CL"))
+            (format nil "~S ~:S" nil nil)
+            (format nil "~10,4,,'-@S" '(a "B")))
+           ))
+
+	(f-directive
+	 #\W				; HyperSpec
+	 :meaning "Write" :use-arg 1
+	 :param '()
+	 :description
+	 '([消費した,(var "arg")の値を，]
+	   [無引数で,(code "write")関数を呼び出したときの方法で出力する．]
+	   [つまり，出力のされ方は,(code "format")実行時の]
+	   [出力制御変数,(paren (code "*print-pretty*") "など")]
+	   [の値に依存する．,(br)]
+	   [修飾子,(colon-mod)をつけると，出力時に,(code "*print-pretty*")]
+	   [がtrueにバインドされる．,(br)]
+	   [修飾子,(at-mod)をつけると，,(code "*print-level*")と]
+	   [,(code "*print-length*")が,(code "nil")にバインドされる．]
+           (lsp-example
+            (let ((*print-length* 3)
+                  (x '(a b c d e f)))
+              (format nil "~W ~@W" x x)))
+           ))
+	)
+   
+      ;; 値の出力（キャラクタ）
+      (section "文字"
+	(f-directive 
+	 #\C
+	 :meaning "Character" :use-arg 1
+	 :param '()
+	 :description
+	 '([消費する,(var "arg")はcharacter型でなければならない．,(br)]
+	   [修飾子をつけずに使用すると，,(code "write-char")]
+	   [関数の方法でその文字を出力する．,(br)]
+	   [,(colon-mod)で修飾すると，印字可能な文字(printing character)]
+	   [の場合は上と同じだが，それ以外の文字に対しては]
+	   [その名前が出力されるようになる]
+	   [,(paren "具体的にどのような出力になるかは処理系依存")．,(br)]
+	   [,(colon-mod)と,(at-mod)の両方で修飾すると，]
+	   [それらの印字可能でない文字をキーボードで入力する際，]
+	   [Shiftキーなどを押す必要があれば，それを考慮した表示になる]
+	   [,(paren "・・・らしいが，CMU Common Lispだと，どの文字でも出力は"
+                    "まったく変わらない")．,(br)]
+	   [,(at-mod)だけで修飾すると，文字を]
+	   [,(kagi-paren "再入力可能な形式")で出力する]
+	   [,(paren (code "~S") "と同じ？")．]
+           (lsp-example
+            (let ((c #\C)) (format nil "~C ~:C ~@C ~:@C" c c c c))
+            (let ((c #\Newline)) (format nil "~C ~:C ~@C ~:@C" c c c c))
+            )
+           )))
+
+      ;; 値の出力（整数）
+      (section "整数"
+	(f-directive
+	 #\D
+	 :meaning "Decimal" :use-arg 1
+	 :param '("mincol" "padchar" "commachar" "comma-interval")
+	 :description
+	 '([,(var "arg")で与えられた整数を10進で出力する．,(br)]
+	   [,(at-mod)で修飾すると，,(squote (code "+"))や,(squote (code "-"))]
+	   [の符号が必ず出力される．,(br)]
+	   [,(colon-mod)で修飾すると，下から,(var "comma-interval")]
+	   [桁ごとに,(var "commachar")で指定された文字で数字を区切る]
+	   [,(paren (var "comma-interval") "のデフォルトは3，"
+	            (var "commachar") "のデフォルトは" (squote (code ",")))]
+	   "．" (br)
+	   [,(var "mincol")が指定されていると，出力文字数が,(var "mincol")]
+	   [に満たない場合，足りない分が左から,(var "padchar")]
+	   [,(paren "デフォルトは空白")で埋められる．]
+	   (lsp-example
+	    (format nil "~D ^ ~D = ~D" -2 21 (expt -2 21))
+	    (format nil "~@5,'_D ^ ~@5D = ~@5D" -2 21 (expt -2 21))
+	    (format nil "~:D ~:,,' ,4D" 1234567890 1234567890)
+            )
+	   ))
+   
+	(f-directive
+	 #\B
+	 :meaning "Binary" :use-arg 1
+	 :param '("mincol" "padchar" "commachar" "comma-interval")
+	 :description
+	 '([,(var "arg")で与えられた整数を2進で出力する．]
+	   [パラメータや修飾子の意味は,(code "~D")と同じ．]
+	   (lsp-example
+	    (let ((x 65535))
+	      (format nil "~D（10進） = ~:,,' ,4B（2進）" x x)))
+	   ))
+    
+	(f-directive
+	 #\O
+	 :meaning "Octal" :use-arg 1
+	 :param '("mincol" "padchar" "commachar" "comma-interval")
+	 :description
+	 '([,(var "arg")で与えられた整数を8進で出力する．]
+	   [パラメータや修飾子の意味は,(code "~D")と同じ．]
+	   (lsp-example
+	    (let ((x 65535))
+	      (format nil "~D（10進） = ~:,,' ,3O（8進）" x x)))
+	   ))
+    
+	(f-directive
+	 #\X
+	 :meaning "heXadecimal" :use-arg 1
+	 :param '("mincol" "padchar" "commachar" "comma-interval")
+	 :description
+	 '([,(var "arg")で与えられた整数を16進で出力する．]
+	   [パラメータや修飾子の意味は,(code "~D")と同じ．]
+	   (lsp-example
+	    (let ((x 65535))
+	      (format nil "~D（10進） = ~:,,' ,2X（16進）" x x)))
+	   ))
+    
+	(f-directive
+	 #\R
+	 :meaning "Radix" :use-arg 1
+	 :param '("radix" "mincol" "padchar" "commachar" "comma-interval")
+	 :description
+	 '([1つでもパラメータを指定した場合とすべて省略した場合で]
+	   [機能がまったく違う．,(br)]
+	   [まず，パラメータを指定した場合，消費した,(var "arg")の値を]
+	   [,(var "radix")進で表示する,(paren "デフォルトは10進")．,(br)]
+	   [このとき，それ以降のパラメータや修飾子の意味は]
+	   [,(code "~D")，,(code "~B")，,(code "~O")，,(code "~X")]
+	   [と同じである．,(br)]
+	   (lsp-example
+	    (let ((x 65535) (r 7))
+	      (format nil "~D（10進） = ~vR（~D進）" x r x r)))
+	   [パラメータを1つも指定しなかったときは，修飾子の指定により]
+	   [以下の動作をする．]
+	   (ul
+	     (li "修飾子なし： 整数を英語の綴り（基数）で出力．")
+	     (li (colon-mod) "修飾子のみ： 整数を英語の綴り（序数）で出力．")
+	     (li (at-mod) "修飾子のみ： 整数をローマ数字で出力．")
+	     (li (colon-mod) "修飾子と" (at-mod) "修飾子の両方： "
+		 "整数を旧ローマ数字で出力．") )
+	   (lsp-example
+	    (format nil "~R~%~:R~%~@R~%~:@R" 3999 3999 3999 3999)
+	    (format nil "~R" (expt 2 100)))
+	   )))
+
+      ;; 値の出力（浮動小数点数）
+      (section "浮動小数点数"
+	(f-directive
+	 #\F
+	 :meaning "Fixed-Format Floating-Point" :use-arg 1
+	 :param '("w" "d" "k" "overflowchar" "padchar")
+	 :description
+	 '([消費した,(var "arg")を，浮動小数点数として表示する．,(br)]
+	   [,(var "d")を指定すると，小数点以下を,(var "d")桁まで出力する] 
+	   [,(paren "桁が足りないときはは0が補充される．"
+		    "多すぎる桁は，四捨五入または切り捨てられる．"
+		    "どちらになるかは処理系依存")．,(br)]
+	   [,(var "k")を指定すると，,(var "arg")を]
+	   [10,(sup (var "k"))倍した値を出力する．,(br)]
+	   [修飾子,(at-mod)を指定すると，,(code "+")や,(code "-")]
+	   [の符号を必ず出力する．,(br)]
+	   (lsp-example
+	    (format nil "pi = ~F" (* (atan 1.0) 4))
+	    (format nil "pi = ~,10F" (* (atan 1.0) 4))
+	    (format nil "pi*100 = ~@,,2F" (* (atan 1.0) 4))
+            )
+	   [パラメータ,(var "w")は出力文字数を指定する．]
+	   [,(var "w")に満たない場合，]
+	   [足りない分は,(var "padchar"),(paren "デフォルトは空白")]
+	   [で左から埋められる．,(br)]
+	   (lsp-example
+	    (format nil "pi = ~9,3,,,'_F" (* (atan 1.0) 4)))
+	   [,(var "w")文字以内ではパラメータに従った出力が不可能であり，]
+	   [かつ,(var "overflowchar")が指定されていた場合，]
+	   [値は出力せず，かわりに,(var "w")文字の,(var "overflowchar")]
+	   [を出力する]
+	   [,(paren (var "overflowchar") "が指定されていなければ，"
+		    (var "w") "文字をオーバーしてでも出力する")．]
+	   (lsp-example
+	    (format nil "pi = ~5F" (* (atan 1.0) 4))
+	    (format nil "pi = ~5,3,,'*F" (* (atan 1.0) 4))
+	    (format nil "pi = ~5,4,,'*F" (* (atan 1.0) 4))
+	    (format nil "pi = ~5,4F" (* (atan 1.0) 4)))
+	   ))
+    
+	(f-directive 
+	 #\E
+	 :meaning "Exponential Floating-Point" :use-arg 1
+	 :param '("w" "d" "e" "k" "overflowchar" "padchar" "exponentchar")
+	 :description 
+	 '([消費した,(var "arg")を浮動小数点数として指数表示で出力する．,(br)]
+	   [,(var "w") ，,(var "d")，,(var "padchar")，]
+	   [,(var "overflowchar")および]
+	   [,(at-mod)修飾子の意味は,(code "~F")と同じである．,(br)]
+	   [指数の出力文字数,(paren "符号は含まない")が]
+	   [,(var "e")文字に満たない場合，足りない分は]
+	   [,(var "exponentchar"),(paren "デフォルトは" (code "0"))]
+	   [で埋められる．,(br)]
+	   [,(var "k")を指定すると，表示する基数の最大位が]
+	   [10,(sup (var "k") "-1")の位になる]
+	   [,(paren "デフォルトは1の位．つまり" (var "k") "=1")．]
+           (lsp-example
+            (format nil "~15,2@E" (sqrt 1000))
+            (format nil "~15,2,3E" (sqrt 1000))
+            (format nil "~15,,,-2E" (sqrt 1000))
+            )
+           ))
+  
+	(f-directive
+	 #\G
+	 :meaning "General Floating-Point" :use-arg 1
+	 :param '("w" "d" "e" "k" "overflowchar" "padchar" "exponentchar")
+	 :description
+	 '([浮動小数点数を，,(var "arg")の絶対値の大きさに応じて]
+	   [~Fと~Eどちらかのスタイルで出力する．]
+	   [どちらが選ばれるか，およびそのとき~Fや~Eに渡されるパラメータは]
+	   [以下の手順で決まる．]
+	   (ol
+	     (li
+	      [10,(sup (var "n") "-1") ,(le) | ,(var "arg") | ,(lt) ]
+	      [10,(sup (var "n")) をみたす整数 ,(var "n")を求める．])
+	     (li
+	      [,(var "ee") ,(larr) ,(var "e")+2] 
+	      (paren "パラメータ" (var "e") "が指定された場合") (br)
+	      [,(var "ee") ,(larr) 4 ]
+	      (paren (var "e") "が省略された場合") (br)
+	      (paren "指数の桁数 + " 
+		     (dquote (code "+e")) "，" (dquote (code "-e")) "の2文字分")
+	      )
+	     (li 
+	      [,(var "ww") ,(larr) ,(var "w")-,(var "ee")]
+	      (paren "パラメータ" (var "w") "が指定された場合") (br)
+	      [,(var "ww") ,(larr) ,(code "nil")]
+	      (paren (var "w") "が省略された場合"))
+	     (li
+	      "パラメータ" (var "d") "が省略されていた場合，" (br)
+	      (var "d") "←" (code "(max ")
+	      (angular (var "argの有効桁数"))
+	      " " (code "(min ") (var "n") "7" (code "))") )
+	     (li
+	      [,(var "dd") ,(larr) ,(var "d") - ,(var "n")])
+	     (li 
+	      [ここで，0 ,(le) ,(var "dd") ,(le) ,(var "d") なら]
+	      (code "~") (var "ww") (code ",") (var "d") (code ",,") 
+	      (var "overflowchar") (code ",") (var "padchar")
+	      (code "F~") (var "ee") (code "@T") [，,(br)]
+	      [そうでなければ，]
+	      (code "~")
+	      (var "w") (code ",") (var "d") (code ",") 
+	      (var "e") (code ",") (var "k") (code ",") 
+	      (var "overflowchar") (code ",") (var "padchar") (code ",")
+	      (var "exponentchar")
+	      (code "E") [として出力される．,(br)]
+	      [,(code "~G")に,(at-mod)修飾子が指定されていた場合は，]
+	      [そのまま,(code "~F")や,(code "~E")の処理に適用される．])
+	    )
+	   ))
+    
+	(f-directive
+	 #\$
+	 :meaning "Monetary Floating-Point" :use-arg 1
+	 :param '("d" "n" "w" "padchar")
+	 :description
+	 '([浮動小数点数を，通貨単位「ドル」に適した形（？）で出力する．,(br)]
+	   [,(var "d")の意味は(code "~F")などと同じ]
+	   [,(paren "小数点以下の出力桁数")．]
+	   [ただし，デフォルト値が2に設定されている．,(br)]
+	   [整数部の文字数が,(var "n") ,(paren "デフォルトは1")]
+	   [に満たない場合，足りない分が0で埋められる．,(br)]
+	   [,(var "w")や,(var "padchar")の意味は]
+	   [,(code "~F")，,(code "~E")と同じ．,(br)]
+	   [修飾子,(at-mod)を指定すると，,(code "+")や,(code "-")]
+	   [の符号を必ず出力する．,(br)]
+	   [修飾子,(colon-mod)を指定すると，符号を]
+	   [,(var "padchar")による文字埋めより前に表示する．]
+           (lsp-example
+            (format nil "$~$ $~$" 3.0 0.82)
+            (format nil "$~@:,,10,'_$" 123.45)
+            )
+           ))
+	)
+      )
+    ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ;; Pretty Printer Operations
+    ;; ・~_ (HyperSpec)
+
+    ;; ・~< ... ~:> (HyperSpec)
+   
+    ;; ・~I (HyperSpec)
+   
+    ;; ・~/ (HyperSpec)
+
+    ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ;; Layout Control
+    (section "レイアウト調整"
+      (f-directive
+       #\T 
+       :meaning "Tabulate" :use-arg 0
+       :param '("colnum" "colinc")
+       :description
+       '([行の先頭から,(var "colnum")文字目の位置に]
+	 [カーソルを移動させる,(paren "そこまでの空白を出力する")．,(br)]
+	 [すでにカーソルがその位置以降にあったときは，]
+	 [現在のカーソル位置より先で最も近い]
+	 [,(var "colnum")+,(var "k")×,(var "colinc")]
+	 [,(paren (var "k") "は整数")文字目の位置にカーソルを移動させる．]
+	 [,(var "colnum")と,(var "colinc") のデフォルト値は]
+         [いずれも1である．,(br)]
+	 [,(at-mod)で修飾すると相対タブになる．]
+	 [つまり，まず,(var "colnum")個の空白を出力し，]
+	 [そこから一番近い,(var "k")×,(var "colinc")文字目の位置まで]
+	 [カーソルを移動させる．]
+         (lsp-example
+          (format nil "~5T0")
+          (format nil "title:~6,3T1~6,3T23~6,3T456~6,3T7890")
+          )
+         ))
+   
+      (f-directive
+       '("&lt;" "&gt;")
+       :meaning "Justification" :use-arg 0
+       :param nil
+       :description
+       '([,(dquote (b "..."))には通常の,(var "control-seqence")]
+	 [を記述する．ただし，この中に,(code "~;")を書くと，]
+         [文字列がそこでセグメントに分割される．,(br)]
+	 [分割されたセグメントが,(var "colinc")の文字幅内で]
+	 [等間隔で出力される,(br)]
+	 [通常，一番左のセグメントは左寄せ，一番右のセグメントは右寄せ]
+	 [になるが，,(code "~&lt;")を,(colon-mod)で修飾すると左端，]
+	 [,(at-mod)で修飾すると右端にも等間隔のスペースが空けられる．,(br)]
+         (lsp-example
+          (format nil "~25<1~;10~;100~;1000~;10000~>")
+          (format nil "~:25<1~;10~;100~;1000~;10000~>")
+          (format nil "~@25<1~;10~;100~;1000~;10000~>")
+          (format nil "~:@25<1~;10~;100~;1000~;10000~>")
+          )
+	 [セグメントの中に,(code "~^")ディレクティブがあり，]
+	 [その処理の実行時に,(var "arg")がすべて消費されていた場合]
+	 [そこで処理が中断され，]
+         [そのセグメントより前のセグメントのみが出力される]
+	 (paren "中断条件を変えるこもできる．後の" (code "~^") "の項を参照")
+         [．,(br)]
+	 [最初のセグメントの区切りを,(code "~:;")のように,(colon-mod)]
+	 [で修飾すると，この最初のセグメントは別の扱いとなる．]
+	 [このときの最初のセグメントは，このディレクティブによる出力が]
+	 [現在の行に表示しきれないときのみ，先頭に出力される．,(br)]
+	 [さらに，,(code "~"),(var "n"),(code ":;")と]
+	 [パラメータを指定すると，最初のセグメントの出力が行われる条件が]
+	 (kagi-paren
+	   "出力後，行の残りの文字数が" (var "n") "文字より少なかったとき")
+	 [になる．,(br)]
+	 [このとき必要な情報である1行の長さは出力ストリームから獲得するが，]
+	 [それができない場合は72に設定される．]
+	 (code "~") (var "n") (code ",") (var "m") (code ":;")
+	 [として，1行の流さを,(var "m")の値で明示的に設定することもできる．]))
+      )
+   
+    ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ;; Control-Flow Operations
+    (section "制御フロー操作"
+      (f-directive
+       #\*
+       :meaning "Go-To" :use-arg "パラメータ，修飾子による"
+       :param '("n")
+       :description
+       '("なにもせずに" (var "arg") "を" (var "n") (paren "デフォルトは1")
+	 "個消費する．"
+	 (br)
+	 (colon-mod) "だけで修飾すると，逆に，消費した" (var "arg")
+	 "を" (var "n") "個分戻す．"
+	 (br)
+	 (at-mod) "だけで修飾すると，次に消費する" (var "arg")
+	 "が" (var "n") "番目の" (var "arg") "になる．"))
+   
+      (f-directive
+       '(#\[ #\])
+       :meaning "Conditional Expression" :use-arg "0または1個"
+       :param '("n")
+       :description
+       '((dquote (b "...")) "には" (code "~&lt;...~>") "と同様"
+	 (code "~;") "でセグメントに分割された" (var "control-seqence")
+	 "を記述する．"
+	 (br)
+	 (var "n") "を指定しなかった場合は"
+	 (var "arg") "を1つ消費し，その" (var "arg") "番目の"
+	 "セグメントを出力する．"
+	 (br)
+	 (var "n") "を指定すると，" (var "arg") "は消費せず，"
+	 (var "n") "番目のセグメントを出力する．"
+	 (br)
+	 "最後のセグメントを" (code "~:;") "で区切っておくと，"
+	 "範囲外のセグメント番号が指定された場合に，" (code "~:;")
+	 "の後のセグメントが出力されるようになる．"
+	 (code "~:;") "がない場合，範囲外のセグメント番号を与えると"
+	 "なにも出力されない．"
+	 (br)
+	 (code "~:[") "のように" (code "~[") "に" (colon-mod)
+	 "修飾子をつけると少し意味が変わる．"
+	 "セグメントは"
+	 (code "~:[")
+	 (var "falsestr") (code "~;") (var "truestr") (code "~]")
+	 "のように2つに区切る．"
+	 "このとき，" (var "arg") "が1つ消費され，"
+	 "それが" (code "nil") "であれば" (var "falsestr") "が，"
+	 "非" (code "nil") "であれば" (var "truestr") "が"
+	 "出力される．"
+	 (br)
+	 (code "~@[") "と" (at-mod) "で修飾するとまた別の意味になる．"
+	 "この場合，"
+	 (code "~@[") (var "truestr") (code "~]")
+	 "とセグメントは1つだけ用意する．"
+	 "このとき，まず次に消費しようとしている" (var "arg")
+	 "の値が参照される．"
+	 "もしその値が非" (code "nil") "であれば，" (var "arg")
+	 "は消費されず，" (var "truestr") "が出力される．"
+	 "値が" (code "nil") "のときは" (var "arg") "が消費され，"
+	 (var "truestr") "は出力されない"
+	 (paren
+	   "どちらの場合でも消費される" (var "arg") "の数を同じにするため，"
+	   (var "truestr") "の中で" (var "arg") "が1つ消費されるように"
+	   "しておくのが普通") "．" ))
+    
+      (f-directive
+       '(#\{ #\})
+       :meaning "Iteration" :use-arg "修飾子による"
+       :param '("n")
+       :description
+       '("修飾子をつけなかった場合，"
+	 (var "arg") "を1つ消費する．この" (var "arg") "は"
+	 "リストでなければならない．"
+	 (dquote (b "...")) "を" (var "control-sequence")
+	 "とする" (code "format") "関数の処理を"
+	 "上記のリストを引数として，その要素を使いきるまで繰り返し"
+	 "実行し，結果を順に出力する．"
+	 (br)
+	 (code "~{") "を" (colon-mod) "で修飾すると再帰的な"
+	 (code "format") "への引数の与え方が変わる．"
+	 "この場合も" (var "arg") "を1つ消費するが，"
+	 "これはリストを要素とするリストでなければならない．"
+	 "そして" (var "k") "回目のループでは"
+	 (var "arg") "中の" (var "k") "番目のリストの要素を引数として"
+	 (var "format") "の処理を実行する"
+	 (paren "つまり，繰り返し回数は" (var "arg")
+		"のリストの要素数となる") "．"
+	 (br)
+	 (at-mod) "で" (code "~{") "を修飾すると，今度は"
+	 "現在の" (code "format") "残りの" (var "arg")
+	 "を引数として再帰的な" (code "format") "の処理を"
+	 "それらを使いきるまで繰り返す．"
+	 (br)
+	 (colon-mod) "と" (at-mod) "の両方で修飾した場合，"
+	 "現在の" (code "format") "の残りの" (var "arg")
+	 "はすべてリストでなければならない．"
+	 "各ループでそれらを1つづつ引数として消費しながら"
+	 "再帰的な" (code "format") "の処理をを繰り返し実行する．"
+	 (br)
+	 "パラメータ" (var "n") "を与えると，"
+	 "引数が残っていても最大" (var "n") "回までしか繰り返さない．"
+	 (br)
+	 (code "~}") "を" (colon-mod) "で修飾しておくと，"
+	 "引数が最初から空でも，最低1回はループ内の処理を行う"
+	 (paren "ただし" (var "n") "が0だとそちらが優先される") "．"
+	 (br)
+	 (dquote (b "...")) "に何も書かなかった場合，"
+	 "まず" (var "arg") "が消費され，その値"
+	 (paren "文字列でなければならない") "が"
+	 "再帰的な" (code "format") "の" (var "control-sequence")
+	 "として使われる．"
+	 (br)
+	 (dquote (b "...")) "中に" (code "~^") "が含まれていると，"
+	 "消費すべき" (var "arg") "が残っていない場合"
+	 "そこでループ処理を中断する"
+	 (paren
+	   "ただし" (colon-mod) "修飾子つきのループ内の場合は，"
+	   "ループから完全に脱出するのではなく，次のループ処理に移る．"
+	   "このとき，完全に脱出したい場合は" (code "~:^") "を使う．"
+	   "この場合" (kagi-paren (var "arg") "が残っていない") "とは，"
+	   (code "~^") "ではsublist内の要素を使い切ったことであり，"
+	   (code "~:^") "ではsublistを使い切ったことであることに注意") "．"
+	 (br)
+	 ;; 手元のCMU Common Lisp 19a でやると、普通に ~^ で中断しても
+	 ;; ループ自体から脱出してしまう。
+	 ;; KCLだとうまくいくのだが。。。CMUCLのバグだろうか？
+	 "中断条件は，" (code "~^") "へのパラメータで変えることもできる．"
+	 "詳しくは後の" (code "~^") "の項を参照．"
+	 ))
+    
+      (f-directive
+       #\?
+       :meaning "Recursive Processing" :use-arg "1または2個"
+       :param nil
+       :description
+       '("修飾子をつけなかった場合，2つ" (var "arg") "を消費する．"
+	 "1つめを" (var "control-sequence") "，"
+	 "2つめ" (paren "リストでなければならない") "の要素を引数として"
+	 "再帰的に" (code "format") "関数の処理を行い，結果を出力する．"
+	 (br)
+	 "修飾子" (at-mod) "をつけると，"
+	 "1つめの" (var "arg") "を消費し，これを" 
+	 (var "control-sequence") "とするところまでは上と同じだが，"
+	 "引数は現在実行中の" (code "format") "の残りの" (var "arg")
+	 "から消費する"
+	 (paren (code "~@?") "の位置に" (code "control-sequence")
+		"が置き換わると考えればよい") "．"))
+      )
+
+    ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    (section "その他"
+      (f-directive
+       '(#\( #\))
+       :meaning "Case Conversion" :use-arg 0
+       :param nil
+       :description
+       '((dquote (b "...")) "の処理結果中のアルファベットをすべて"
+	 "小文字にする．"
+	 (br)
+	 (code "~(") "を" (colon-mod) "で修飾すると"
+	 "単語の先頭のみを大文字，それ以外を小文字にする．"
+	 (br)
+	 (at-mod) "で修飾すると"
+	 "1つめの単語の先頭を大文字，それ以外を小文字にする．"
+	 (br)
+	 "両方で修飾すると"
+	 "全てのアルファベットを大文字にする．"
+	 ))
+    
+      (f-directive
+       #\P
+       :meaning "Plural" :use-arg "0または1個"
+       :param nil
+       :description
+       '((colon-mod) "で修飾しなかった場合は" (var "arg") "を1つ消費し，"
+	 "修飾した場合は最後に消費した" (var "arg") "を参照する．"
+	 "その値が1と" (code "eql") "の意味で等しければ"
+	 (dquote (samp "s")) "を出力する．"
+	 "等しくなければなにも出力しない．"
+	 (br)
+	 "修飾子" (at-mod) "をつけておくと，参照した値が"
+	 "1と" (code "eql") "のときは" (dquote (samp "y")) "，"
+	 "そうでないときに" (dquote (samp "ies")) "が出力される．"
+	 ))
+    
+      (f-directive
+       #\^
+       :meaning "Escape Upward" :use-arg 0
+       :param '("n" "m" "p")
+       :description 
+       '((span (code "~&lt;") (b "...") (code "~&gt;")) "内で使用すると，"
+	 "消費できる" (var "arg") "が残っていなければ"
+	 "以降のセグメントの処理を中断する．"
+	 (span (code "~{") (b "...") (code "~}")) "内で使用すると，"
+	 "同様の場合そこでループを抜ける．"
+	 "これらに特有の話はそれぞれの項を参照．"
+	 (br)
+	 "それ以外の場所で使用すると，"
+	 (var "arg") "が残っていない場合"
+	 (var "format") "の処理自体をそこで中断する．"
+	 (br)
+	 "パラメータ" (var "n") "を与えると，"
+	 "中断条件が" (kagi-paren (var "n") "=" "0" "のとき")
+	 "となる．デフォルトは残りの" (var "arg") "の数である．"
+	 (paren "したがって，" (code "~#^") "とすれば"
+		"デフォルトと同じ条件になる．")
+	 (br)
+	 (var "m") "も指定すると，"
+	 "中断条件は" (kagi-paren (var "n") "=" (var "m") "のとき") 
+	 "になる．"
+	 (br)
+	 "さらに" (var "p") "も指定すると，"
+	 "中断条件は" 
+	 (kagi-paren (var "n") "≦" (var "m") "≦" (var "p") "のとき")
+	 "になる．"
+	 ))
+    
+      (f-directive
+       "〈改行〉"
+       :meaning "Ignored Newline" :use-arg 0
+       :param nil
+       :description
+       '([,(code "~")の直後の改行を含め，空白文字以外の文字が現れるまで]
+	 [それらの空白文字をすべて無視する．,(br)]
+	 [ただし，,(colon-mod)で修飾すると]
+	 [直後の改行以外の空白は無視しない．,(br)]
+	 [,(at-mod)で修飾すると,(code "~")の直後の改行は無視しない．]
+	 (lsp-example
+	  (format nil "abc
+   def~
+   12345~:
+   xyz~@
+   foobar"))
+	 ))
+      )
+    
+    (hr)
+    ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    (mypageend
+     :back "index.html"
+     :lmlfile "format-func.lml"
+     :address-img "/~tasuku/maddr.png" :address-alt "domain=media.kyoto-u.ac.jp user=tasuku"
+     :valid-xhtml11 t)
+    ))

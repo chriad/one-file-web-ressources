@@ -1,5 +1,7 @@
-Curated list of (mostly single file) ressources like cheat-sheets that I found all over the internet and that I'd like to have a local copy of.
+My personal wayback machine.
 
 for html wrapped text:
 
+```bash
 w3m -dump https://gcc.gnu.org/onlinedocs/gcc-4.8.5/gnat_ugn_unw/Basic-Assembler-Syntax.html
+```

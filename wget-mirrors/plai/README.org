@@ -1,0 +1,1 @@
+just run wget again to get newer versions. -N option will only download newer files on server.

@@ -1,0 +1,4 @@
+Captured html snippets from the code inspector
+
+To view
+w3m -dump <file>.html

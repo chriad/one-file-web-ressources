@@ -1,7 +1,32 @@
 My personal wayback machine.
 
-for html wrapped text:
+Keep track of changes to non version controlled websites by mirroring them from time to time.
+Use your local copy instead of browsing online.
+
+* non html ressource
+use `wget.sh`
+** options
+When running Wget without -N, -nc, -r, or -p, downloading the same file in the same directory will result in the original copy of file being preserved and the second copy being named file.1.
+
+** pdf
+# modified pdf
+git--diff-pdf <file>.pdf
+ 
+* html ressource
+** TODO general options
+  -F,  --force-html                treat input file as HTML
+  -B,  --base=URL                  resolves HTML input-file links (-i -F)
+
+
+** view
 
 ```bash
 w3m -dump https://gcc.gnu.org/onlinedocs/gcc-4.8.5/gnat_ugn_unw/Basic-Assembler-Syntax.html
 ```
+
+** TODO unnamed html ressource case
+--default-page=name
+           Use name as the default file name when it isn’t known (i.e., for URLs that end in a slash), instead of index.html.
+ 
+example: http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/
+

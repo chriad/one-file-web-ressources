@@ -1,1 +1,28 @@
+No data received.
+No data received.
+No data received.
+No data received.
+No data received.
+No data received.
+No data received.
+No data received.
+No data received.
+No data received.
+No data received.
+No data received.
+No data received.
+No data received.
+No data received.
+No data received.
+No data received.
+No data received.
+No data received.
+No data received.
+2024-07-20 18:22:52 URL:https://svn.nmap.org/nmap/docs/nmap.usage.txt [6005/6005] -> "./downloads/nmap.usage.txt" [1]
+2024-07-20 18:22:56 URL:http://www.egr.unlv.edu/~ed/assembly64.pdf [7061998/7061998] -> "./downloads/assembly64.pdf" [1]
 wget: unable to resolve host address ‘ais.sys.i.kyoto-u.ac.jp’
+2024-07-20 18:23:01 URL:https://www.iana.org/assignments/media-types/media-types.txt [462264/462264] -> "./downloads/media-types.txt" [1]
+2024-07-20 18:23:04 URL:https://www.nhplace.com/kent/Papers/Special-Forms.html [68585/68585] -> "./downloads/Special-Forms.html" [1]
+FINISHED --2024-07-20 18:23:04--
+Total wall clock time: 2m 44s
+Downloaded: 4 files, 7.2M in 3.9s (1.84 MB/s)

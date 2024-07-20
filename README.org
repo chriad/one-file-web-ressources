@@ -3,10 +3,20 @@ My personal wayback machine.
 Keep track of changes to non version controlled websites by mirroring them from time to time.
 Use your local copy instead of browsing online.
 
-* non html ressource
+
+README.org :: this file
+downloads :: non-html ressource and non-recursive html ressources
+firefrox-html-captures :: copy html snippet form firefox inspector
+ressources-without-url :: files that I don't know the origin
+unnamed.input :: 
+urls.input :: ressources urls
+urls.input.log 
+wget.sh :: "download driver"
+wget-mirrors :: recursive html pages
+
+
+* non html ressource or non-recursive html ressource (single page)
 use `wget.sh`
-** options
-When running Wget without -N, -nc, -r, or -p, downloading the same file in the same directory will result in the original copy of file being preserved and the second copy being named file.1.
 
 ** pdf
 # modified pdf
@@ -27,6 +37,9 @@ w3m -dump https://gcc.gnu.org/onlinedocs/gcc-4.8.5/gnat_ugn_unw/Basic-Assembler-
 ** TODO unnamed html ressource case
 --default-page=name
            Use name as the default file name when it isn’t known (i.e., for URLs that end in a slash), instead of index.html.
- 
+
 example: http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/
+
+`--adjust-extension` if the file ends in something like bla/bli without explicit .html
+
 

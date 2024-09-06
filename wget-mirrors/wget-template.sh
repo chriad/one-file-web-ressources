@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# possibly
+# possibly:
 # --span-hosts or --domains
 # mirror = -N -r -l inf
 
@@ -11,7 +11,9 @@ wget \
     --random-wait \
     --no-host-directories \
     --no-parent \
-    --adjust-extension
+    --adjust-extension \
     -P data \
+    --directory-prefix "${3}" \
+    --output-file=./log.txt \
     --cut-dirs="${1}" \
     --continue "${2}"

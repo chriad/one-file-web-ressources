@@ -1,0 +1,1298 @@
+--2024-09-06 11:55:25--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/
+Resolving dept-info.labri.fr (dept-info.labri.fr)... 147.210.9.83, 2001:660:6101:404::2:80
+Connecting to dept-info.labri.fr (dept-info.labri.fr)|147.210.9.83|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘successful-lisp/index.html’
+
+     0K .......... ..                                           331K=0.04s
+
+Last-modified header missing -- time-stamps turned off.
+2024-09-06 11:55:25 (331 KB/s) - ‘successful-lisp/index.html’ saved [13162]
+
+Loading robots.txt; please ignore errors.
+--2024-09-06 11:55:25--  https://dept-info.labri.fr/robots.txt
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 404 Not Found
+2024-09-06 11:55:26 ERROR 404: Not Found.
+
+--2024-09-06 11:55:26--  https://dept-info.labri.fr/icons/blank.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 148 [image/gif]
+Saving to: ‘successful-lisp/blank.gif’
+
+     0K                                                       100%  257M=0s
+
+2024-09-06 11:55:26 (257 MB/s) - ‘successful-lisp/blank.gif’ saved [148/148]
+
+--2024-09-06 11:55:26--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/?C=N;O=D
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘successful-lisp/index.html?C=N;O=D.html’
+
+     0K .......... ..                                           537K=0.02s
+
+Last-modified header missing -- time-stamps turned off.
+2024-09-06 11:55:26 (537 KB/s) - ‘successful-lisp/index.html?C=N;O=D.html’ saved [13162]
+
+--2024-09-06 11:55:26--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/?C=M;O=A
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘successful-lisp/index.html?C=M;O=A.html’
+
+     0K .......... ..                                          3.36M=0.004s
+
+Last-modified header missing -- time-stamps turned off.
+2024-09-06 11:55:26 (3.36 MB/s) - ‘successful-lisp/index.html?C=M;O=A.html’ saved [13162]
+
+--2024-09-06 11:55:26--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/?C=S;O=A
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘successful-lisp/index.html?C=S;O=A.html’
+
+     0K .......... ..                                          3.35M=0.004s
+
+Last-modified header missing -- time-stamps turned off.
+2024-09-06 11:55:26 (3.35 MB/s) - ‘successful-lisp/index.html?C=S;O=A.html’ saved [13162]
+
+--2024-09-06 11:55:26--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/?C=D;O=A
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘successful-lisp/index.html?C=D;O=A.html’
+
+     0K .......... ..                                          4.07M=0.003s
+
+Last-modified header missing -- time-stamps turned off.
+2024-09-06 11:55:26 (4.07 MB/s) - ‘successful-lisp/index.html?C=D;O=A.html’ saved [13162]
+
+--2024-09-06 11:55:26--  https://dept-info.labri.fr/icons/back.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 216 [image/gif]
+Saving to: ‘successful-lisp/back.gif’
+
+     0K                                                       100%  429M=0s
+
+2024-09-06 11:55:26 (429 MB/s) - ‘successful-lisp/back.gif’ saved [216/216]
+
+--2024-09-06 11:55:26--  https://dept-info.labri.fr/icons/text.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 229 [image/gif]
+Saving to: ‘successful-lisp/text.gif’
+
+     0K                                                       100%  383M=0s
+
+2024-09-06 11:55:26 (383 MB/s) - ‘successful-lisp/text.gif’ saved [229/229]
+
+--2024-09-06 11:55:26--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/about.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 1373 (1.3K) [text/html]
+Saving to: ‘successful-lisp/about.html’
+
+     0K .                                                     100% 2.10G=0s
+
+2024-09-06 11:55:26 (2.10 GB/s) - ‘successful-lisp/about.html’ saved [1373/1373]
+
+--2024-09-06 11:55:26--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/acknowledgments.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 1072 (1.0K) [text/html]
+Saving to: ‘successful-lisp/acknowledgments.html’
+
+     0K .                                                     100% 1.66G=0s
+
+2024-09-06 11:55:26 (1.66 GB/s) - ‘successful-lisp/acknowledgments.html’ saved [1072/1072]
+
+--2024-09-06 11:55:26--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/appendix-a.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 731 [text/html]
+Saving to: ‘successful-lisp/appendix-a.html’
+
+     0K                                                       100% 1.84G=0s
+
+2024-09-06 11:55:26 (1.84 GB/s) - ‘successful-lisp/appendix-a.html’ saved [731/731]
+
+--2024-09-06 11:55:26--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/appendix-b.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 590 [text/html]
+Saving to: ‘successful-lisp/appendix-b.html’
+
+     0K                                                       100% 1.67G=0s
+
+2024-09-06 11:55:26 (1.67 GB/s) - ‘successful-lisp/appendix-b.html’ saved [590/590]
+
+--2024-09-06 11:55:26--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/author.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 1081 (1.1K) [text/html]
+Saving to: ‘successful-lisp/author.html’
+
+     0K .                                                     100% 1.50G=0s
+
+2024-09-06 11:55:26 (1.50 GB/s) - ‘successful-lisp/author.html’ saved [1081/1081]
+
+--2024-09-06 11:55:26--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter01.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 17734 (17K) [text/html]
+Saving to: ‘successful-lisp/chapter01.html’
+
+     0K .......... .......                                    100% 2.38M=0.007s
+
+2024-09-06 11:55:26 (2.38 MB/s) - ‘successful-lisp/chapter01.html’ saved [17734/17734]
+
+--2024-09-06 11:55:26--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter02.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 9099 (8.9K) [text/html]
+Saving to: ‘successful-lisp/chapter02.html’
+
+     0K ........                                              100%  156M=0s
+
+2024-09-06 11:55:27 (156 MB/s) - ‘successful-lisp/chapter02.html’ saved [9099/9099]
+
+--2024-09-06 11:55:27--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter03-01.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 4849 (4.7K) [text/html]
+Saving to: ‘successful-lisp/chapter03-01.html’
+
+     0K ....                                                  100% 3.64G=0s
+
+2024-09-06 11:55:27 (3.64 GB/s) - ‘successful-lisp/chapter03-01.html’ saved [4849/4849]
+
+--2024-09-06 11:55:27--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter03-02.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 13222 (13K) [text/html]
+Saving to: ‘successful-lisp/chapter03-02.html’
+
+     0K .......... ..                                         100% 3.55M=0.004s
+
+2024-09-06 11:55:27 (3.55 MB/s) - ‘successful-lisp/chapter03-02.html’ saved [13222/13222]
+
+--2024-09-06 11:55:27--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter03-03.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 13810 (13K) [text/html]
+Saving to: ‘successful-lisp/chapter03-03.html’
+
+     0K .......... ...                                        100%  574K=0.02s
+
+2024-09-06 11:55:27 (574 KB/s) - ‘successful-lisp/chapter03-03.html’ saved [13810/13810]
+
+--2024-09-06 11:55:27--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter03-04.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 6141 (6.0K) [text/html]
+Saving to: ‘successful-lisp/chapter03-04.html’
+
+     0K .....                                                 100% 4.50G=0s
+
+2024-09-06 11:55:27 (4.50 GB/s) - ‘successful-lisp/chapter03-04.html’ saved [6141/6141]
+
+--2024-09-06 11:55:27--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter03-05.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 8075 (7.9K) [text/html]
+Saving to: ‘successful-lisp/chapter03-05.html’
+
+     0K .......                                               100%  111M=0s
+
+2024-09-06 11:55:27 (111 MB/s) - ‘successful-lisp/chapter03-05.html’ saved [8075/8075]
+
+--2024-09-06 11:55:27--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter03-06.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 7243 (7.1K) [text/html]
+Saving to: ‘successful-lisp/chapter03-06.html’
+
+     0K .......                                               100% 1.51G=0s
+
+2024-09-06 11:55:27 (1.51 GB/s) - ‘successful-lisp/chapter03-06.html’ saved [7243/7243]
+
+--2024-09-06 11:55:27--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter03-07.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 5387 (5.3K) [text/html]
+Saving to: ‘successful-lisp/chapter03-07.html’
+
+     0K .....                                                 100% 5.28G=0s
+
+2024-09-06 11:55:27 (5.28 GB/s) - ‘successful-lisp/chapter03-07.html’ saved [5387/5387]
+
+--2024-09-06 11:55:27--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter03-08.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 5660 (5.5K) [text/html]
+Saving to: ‘successful-lisp/chapter03-08.html’
+
+     0K .....                                                 100% 5.02G=0s
+
+2024-09-06 11:55:27 (5.02 GB/s) - ‘successful-lisp/chapter03-08.html’ saved [5660/5660]
+
+--2024-09-06 11:55:27--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter03-09.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 5038 (4.9K) [text/html]
+Saving to: ‘successful-lisp/chapter03-09.html’
+
+     0K ....                                                  100% 4.65G=0s
+
+2024-09-06 11:55:27 (4.65 GB/s) - ‘successful-lisp/chapter03-09.html’ saved [5038/5038]
+
+--2024-09-06 11:55:27--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter03-10.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 36009 (35K) [text/html]
+Saving to: ‘successful-lisp/chapter03-10.html’
+
+     0K .......... .......... .......... .....                100% 1.42M=0.02s
+
+2024-09-06 11:55:27 (1.42 MB/s) - ‘successful-lisp/chapter03-10.html’ saved [36009/36009]
+
+--2024-09-06 11:55:27--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter03-11.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 12956 (13K) [text/html]
+Saving to: ‘successful-lisp/chapter03-11.html’
+
+     0K .......... ..                                         100%  469K=0.03s
+
+2024-09-06 11:55:27 (469 KB/s) - ‘successful-lisp/chapter03-11.html’ saved [12956/12956]
+
+--2024-09-06 11:55:27--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter03-12.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 5402 (5.3K) [text/html]
+Saving to: ‘successful-lisp/chapter03-12.html’
+
+     0K .....                                                 100% 4.26G=0s
+
+2024-09-06 11:55:28 (4.26 GB/s) - ‘successful-lisp/chapter03-12.html’ saved [5402/5402]
+
+--2024-09-06 11:55:28--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter03.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 2372 (2.3K) [text/html]
+Saving to: ‘successful-lisp/chapter03.html’
+
+     0K ..                                                    100% 2.83G=0s
+
+2024-09-06 11:55:28 (2.83 GB/s) - ‘successful-lisp/chapter03.html’ saved [2372/2372]
+
+--2024-09-06 11:55:28--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter04.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 56083 (55K) [text/html]
+Saving to: ‘successful-lisp/chapter04.html’
+
+     0K .......... .......... .......... .......... .......... 91% 1.85M 0s
+    50K ....                                                  100% 8.88T=0.03s
+
+2024-09-06 11:55:28 (2.03 MB/s) - ‘successful-lisp/chapter04.html’ saved [56083/56083]
+
+--2024-09-06 11:55:28--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter05.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 6147 (6.0K) [text/html]
+Saving to: ‘successful-lisp/chapter05.html’
+
+     0K ......                                                100% 4.94G=0s
+
+2024-09-06 11:55:28 (4.94 GB/s) - ‘successful-lisp/chapter05.html’ saved [6147/6147]
+
+--2024-09-06 11:55:28--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter06.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 10145 (9.9K) [text/html]
+Saving to: ‘successful-lisp/chapter06.html’
+
+     0K .........                                             100%  367K=0.03s
+
+2024-09-06 11:55:28 (367 KB/s) - ‘successful-lisp/chapter06.html’ saved [10145/10145]
+
+--2024-09-06 11:55:28--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter07.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 22947 (22K) [text/html]
+Saving to: ‘successful-lisp/chapter07.html’
+
+     0K .......... .......... ..                              100%  869K=0.03s
+
+2024-09-06 11:55:28 (869 KB/s) - ‘successful-lisp/chapter07.html’ saved [22947/22947]
+
+--2024-09-06 11:55:28--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter08.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 8414 (8.2K) [text/html]
+Saving to: ‘successful-lisp/chapter08.html’
+
+     0K ........                                              100%  193M=0s
+
+2024-09-06 11:55:28 (193 MB/s) - ‘successful-lisp/chapter08.html’ saved [8414/8414]
+
+--2024-09-06 11:55:28--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter09.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 7742 (7.6K) [text/html]
+Saving to: ‘successful-lisp/chapter09.html’
+
+     0K .......                                               100% 4.29G=0s
+
+2024-09-06 11:55:28 (4.29 GB/s) - ‘successful-lisp/chapter09.html’ saved [7742/7742]
+
+--2024-09-06 11:55:28--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter10.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 10449 (10K) [text/html]
+Saving to: ‘successful-lisp/chapter10.html’
+
+     0K ..........                                            100%  385K=0.03s
+
+2024-09-06 11:55:28 (385 KB/s) - ‘successful-lisp/chapter10.html’ saved [10449/10449]
+
+--2024-09-06 11:55:28--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter11.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 14063 (14K) [text/html]
+Saving to: ‘successful-lisp/chapter11.html’
+
+     0K .......... ...                                        100% 15.9M=0.001s
+
+2024-09-06 11:55:28 (15.9 MB/s) - ‘successful-lisp/chapter11.html’ saved [14063/14063]
+
+--2024-09-06 11:55:28--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter12.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 12558 (12K) [text/html]
+Saving to: ‘successful-lisp/chapter12.html’
+
+     0K .......... ..                                         100%  450K=0.03s
+
+2024-09-06 11:55:28 (450 KB/s) - ‘successful-lisp/chapter12.html’ saved [12558/12558]
+
+--2024-09-06 11:55:28--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter13.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 14185 (14K) [text/html]
+Saving to: ‘successful-lisp/chapter13.html’
+
+     0K .......... ...                                        100%  517K=0.03s
+
+2024-09-06 11:55:28 (517 KB/s) - ‘successful-lisp/chapter13.html’ saved [14185/14185]
+
+--2024-09-06 11:55:28--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter14.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 20679 (20K) [text/html]
+Saving to: ‘successful-lisp/chapter14.html’
+
+     0K .......... ..........                                 100% 8.17M=0.002s
+
+2024-09-06 11:55:29 (8.17 MB/s) - ‘successful-lisp/chapter14.html’ saved [20679/20679]
+
+--2024-09-06 11:55:29--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter15.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 8801 (8.6K) [text/html]
+Saving to: ‘successful-lisp/chapter15.html’
+
+     0K ........                                              100%  200M=0s
+
+2024-09-06 11:55:29 (200 MB/s) - ‘successful-lisp/chapter15.html’ saved [8801/8801]
+
+--2024-09-06 11:55:29--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter16.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 14966 (15K) [text/html]
+Saving to: ‘successful-lisp/chapter16.html’
+
+     0K .......... ....                                       100%  551K=0.03s
+
+2024-09-06 11:55:29 (551 KB/s) - ‘successful-lisp/chapter16.html’ saved [14966/14966]
+
+--2024-09-06 11:55:29--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter17.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 5436 (5.3K) [text/html]
+Saving to: ‘successful-lisp/chapter17.html’
+
+     0K .....                                                 100% 7.79G=0s
+
+2024-09-06 11:55:29 (7.79 GB/s) - ‘successful-lisp/chapter17.html’ saved [5436/5436]
+
+--2024-09-06 11:55:29--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter18.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 12014 (12K) [text/html]
+Saving to: ‘successful-lisp/chapter18.html’
+
+     0K .......... .                                          100%  437K=0.03s
+
+2024-09-06 11:55:29 (437 KB/s) - ‘successful-lisp/chapter18.html’ saved [12014/12014]
+
+--2024-09-06 11:55:29--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter19.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 15372 (15K) [text/html]
+Saving to: ‘successful-lisp/chapter19.html’
+
+     0K .......... .....                                      100% 14.2M=0.001s
+
+2024-09-06 11:55:29 (14.2 MB/s) - ‘successful-lisp/chapter19.html’ saved [15372/15372]
+
+--2024-09-06 11:55:29--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter20.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 22762 (22K) [text/html]
+Saving to: ‘successful-lisp/chapter20.html’
+
+     0K .......... .......... ..                              100%  798K=0.03s
+
+2024-09-06 11:55:29 (798 KB/s) - ‘successful-lisp/chapter20.html’ saved [22762/22762]
+
+--2024-09-06 11:55:29--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter21.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 10964 (11K) [text/html]
+Saving to: ‘successful-lisp/chapter21.html’
+
+     0K ..........                                            100% 2.90M=0.004s
+
+2024-09-06 11:55:29 (2.90 MB/s) - ‘successful-lisp/chapter21.html’ saved [10964/10964]
+
+--2024-09-06 11:55:29--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter22.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 5336 (5.2K) [text/html]
+Saving to: ‘successful-lisp/chapter22.html’
+
+     0K .....                                                 100% 3.91G=0s
+
+2024-09-06 11:55:29 (3.91 GB/s) - ‘successful-lisp/chapter22.html’ saved [5336/5336]
+
+--2024-09-06 11:55:29--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter23.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 24006 (23K) [text/html]
+Saving to: ‘successful-lisp/chapter23.html’
+
+     0K .......... .......... ...                             100% 1.05M=0.02s
+
+2024-09-06 11:55:29 (1.05 MB/s) - ‘successful-lisp/chapter23.html’ saved [24006/24006]
+
+--2024-09-06 11:55:29--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter24.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 12784 (12K) [text/html]
+Saving to: ‘successful-lisp/chapter24.html’
+
+     0K .......... ..                                         100% 9.55M=0.001s
+
+2024-09-06 11:55:29 (9.55 MB/s) - ‘successful-lisp/chapter24.html’ saved [12784/12784]
+
+--2024-09-06 11:55:29--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter25.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 6598 (6.4K) [text/html]
+Saving to: ‘successful-lisp/chapter25.html’
+
+     0K ......                                                100% 4.92G=0s
+
+2024-09-06 11:55:29 (4.92 GB/s) - ‘successful-lisp/chapter25.html’ saved [6598/6598]
+
+--2024-09-06 11:55:29--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter26.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 6925 (6.8K) [text/html]
+Saving to: ‘successful-lisp/chapter26.html’
+
+     0K ......                                                100% 5.81G=0s
+
+2024-09-06 11:55:30 (5.81 GB/s) - ‘successful-lisp/chapter26.html’ saved [6925/6925]
+
+--2024-09-06 11:55:30--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter27.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 7572 (7.4K) [text/html]
+Saving to: ‘successful-lisp/chapter27.html’
+
+     0K .......                                               100% 4.76G=0s
+
+2024-09-06 11:55:30 (4.76 GB/s) - ‘successful-lisp/chapter27.html’ saved [7572/7572]
+
+--2024-09-06 11:55:30--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter28.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 23358 (23K) [text/html]
+Saving to: ‘successful-lisp/chapter28.html’
+
+     0K .......... .......... ..                              100% 1.35M=0.02s
+
+2024-09-06 11:55:30 (1.35 MB/s) - ‘successful-lisp/chapter28.html’ saved [23358/23358]
+
+--2024-09-06 11:55:30--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter29.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 6762 (6.6K) [text/html]
+Saving to: ‘successful-lisp/chapter29.html’
+
+     0K ......                                                100% 4.06G=0s
+
+2024-09-06 11:55:30 (4.06 GB/s) - ‘successful-lisp/chapter29.html’ saved [6762/6762]
+
+--2024-09-06 11:55:30--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter30.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 16038 (16K) [text/html]
+Saving to: ‘successful-lisp/chapter30.html’
+
+     0K .......... .....                                      100% 1.46M=0.01s
+
+2024-09-06 11:55:30 (1.46 MB/s) - ‘successful-lisp/chapter30.html’ saved [16038/16038]
+
+--2024-09-06 11:55:30--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter31.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 8554 (8.4K) [text/html]
+Saving to: ‘successful-lisp/chapter31.html’
+
+     0K ........                                              100%  129M=0s
+
+2024-09-06 11:55:30 (129 MB/s) - ‘successful-lisp/chapter31.html’ saved [8554/8554]
+
+--2024-09-06 11:55:30--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter32.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 12678 (12K) [text/html]
+Saving to: ‘successful-lisp/chapter32.html’
+
+     0K .......... ..                                         100%  619K=0.02s
+
+2024-09-06 11:55:30 (619 KB/s) - ‘successful-lisp/chapter32.html’ saved [12678/12678]
+
+--2024-09-06 11:55:30--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter33.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 6227 (6.1K) [text/html]
+Saving to: ‘successful-lisp/chapter33.html’
+
+     0K ......                                                100% 5.32G=0s
+
+2024-09-06 11:55:30 (5.32 GB/s) - ‘successful-lisp/chapter33.html’ saved [6227/6227]
+
+--2024-09-06 11:55:30--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/chapter34.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 6781 (6.6K) [text/html]
+Saving to: ‘successful-lisp/chapter34.html’
+
+     0K ......                                                100% 7.34G=0s
+
+2024-09-06 11:55:30 (7.34 GB/s) - ‘successful-lisp/chapter34.html’ saved [6781/6781]
+
+--2024-09-06 11:55:30--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/contents.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 22069 (22K) [text/html]
+Saving to: ‘successful-lisp/contents.html’
+
+     0K .......... .......... .                               100% 1.22M=0.02s
+
+2024-09-06 11:55:30 (1.22 MB/s) - ‘successful-lisp/contents.html’ saved [22069/22069]
+
+--2024-09-06 11:55:30--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/copyright.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 626 [text/html]
+Saving to: ‘successful-lisp/copyright.html’
+
+     0K                                                       100% 2.16G=0s
+
+2024-09-06 11:55:30 (2.16 GB/s) - ‘successful-lisp/copyright.html’ saved [626/626]
+
+--2024-09-06 11:55:30--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/cover.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 1523 (1.5K) [text/html]
+Saving to: ‘successful-lisp/cover.html’
+
+     0K .                                                     100% 2.68G=0s
+
+2024-09-06 11:55:30 (2.68 GB/s) - ‘successful-lisp/cover.html’ saved [1523/1523]
+
+--2024-09-06 11:55:30--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/credits.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 843 [text/html]
+Saving to: ‘successful-lisp/credits.html’
+
+     0K                                                       100% 1.40G=0s
+
+2024-09-06 11:55:30 (1.40 GB/s) - ‘successful-lisp/credits.html’ saved [843/843]
+
+--2024-09-06 11:55:30--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/dedication.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 667 [text/html]
+Saving to: ‘successful-lisp/dedication.html’
+
+     0K                                                       100%  748M=0s
+
+2024-09-06 11:55:31 (748 MB/s) - ‘successful-lisp/dedication.html’ saved [667/667]
+
+--2024-09-06 11:55:31--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/foreword.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 612 [text/html]
+Saving to: ‘successful-lisp/foreword.html’
+
+     0K                                                       100% 1.19G=0s
+
+2024-09-06 11:55:31 (1.19 GB/s) - ‘successful-lisp/foreword.html’ saved [612/612]
+
+--2024-09-06 11:55:31--  https://dept-info.labri.fr/icons/folder.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 225 [image/gif]
+Saving to: ‘successful-lisp/folder.gif’
+
+     0K                                                       100%  512M=0s
+
+2024-09-06 11:55:31 (512 MB/s) - ‘successful-lisp/folder.gif’ saved [225/225]
+
+--2024-09-06 11:55:31--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 6487 (6.3K) [text/html]
+Saving to: ‘successful-lisp/gifs/index.html’
+
+     0K ......                                                100% 4.91G=0s
+
+Last-modified header missing -- time-stamps turned off.
+2024-09-06 11:55:31 (4.91 GB/s) - ‘successful-lisp/gifs/index.html’ saved [6487/6487]
+
+--2024-09-06 11:55:31--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/introduction.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 1658 (1.6K) [text/html]
+Saving to: ‘successful-lisp/introduction.html’
+
+     0K .                                                     100% 3.09G=0s
+
+2024-09-06 11:55:31 (3.09 GB/s) - ‘successful-lisp/introduction.html’ saved [1658/1658]
+
+--2024-09-06 11:55:31--  https://dept-info.labri.fr/icons/unknown.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 245 [image/gif]
+Saving to: ‘successful-lisp/unknown.gif’
+
+     0K                                                       100%  649M=0s
+
+2024-09-06 11:55:31 (649 MB/s) - ‘successful-lisp/unknown.gif’ saved [245/245]
+
+--2024-09-06 11:55:31--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/urls
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 914
+Saving to: ‘successful-lisp/urls.html’
+
+     0K                                                       100% 1.64G=0s
+
+2024-09-06 11:55:31 (1.64 GB/s) - ‘successful-lisp/urls.html’ saved [914/914]
+
+--2024-09-06 11:55:31--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/?C=N;O=A
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘successful-lisp/index.html?C=N;O=A.html’
+
+     0K .......... ..                                           239K=0.05s
+
+Last-modified header missing -- time-stamps turned off.
+2024-09-06 11:55:31 (239 KB/s) - ‘successful-lisp/index.html?C=N;O=A.html’ saved [13162]
+
+--2024-09-06 11:55:31--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/?C=M;O=D
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘successful-lisp/index.html?C=M;O=D.html’
+
+     0K .......... ..                                           318K=0.04s
+
+Last-modified header missing -- time-stamps turned off.
+2024-09-06 11:55:31 (318 KB/s) - ‘successful-lisp/index.html?C=M;O=D.html’ saved [13162]
+
+--2024-09-06 11:55:31--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/?C=S;O=D
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘successful-lisp/index.html?C=S;O=D.html’
+
+     0K .......... ..                                           417K=0.03s
+
+Last-modified header missing -- time-stamps turned off.
+2024-09-06 11:55:32 (417 KB/s) - ‘successful-lisp/index.html?C=S;O=D.html’ saved [13162]
+
+--2024-09-06 11:55:32--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/?C=D;O=D
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘successful-lisp/index.html?C=D;O=D.html’
+
+     0K .......... ..                                           516K=0.02s
+
+Last-modified header missing -- time-stamps turned off.
+2024-09-06 11:55:32 (516 KB/s) - ‘successful-lisp/index.html?C=D;O=D.html’ saved [13162]
+
+--2024-09-06 11:55:32--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/track1.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 404 Not Found
+2024-09-06 11:55:32 ERROR 404: Not Found.
+
+--2024-09-06 11:55:32--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/track2.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 404 Not Found
+2024-09-06 11:55:32 ERROR 404: Not Found.
+
+--2024-09-06 11:55:32--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/track3.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 404 Not Found
+2024-09-06 11:55:32 ERROR 404: Not Found.
+
+--2024-09-06 11:55:32--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/track4.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 404 Not Found
+2024-09-06 11:55:32 ERROR 404: Not Found.
+
+--2024-09-06 11:55:32--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/track5.html
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 404 Not Found
+2024-09-06 11:55:32 ERROR 404: Not Found.
+
+--2024-09-06 11:55:32--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/circle-dot.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 857 [image/gif]
+Saving to: ‘successful-lisp/gifs/circle-dot.gif’
+
+     0K                                                       100% 2.00G=0s
+
+2024-09-06 11:55:32 (2.00 GB/s) - ‘successful-lisp/gifs/circle-dot.gif’ saved [857/857]
+
+--2024-09-06 11:55:32--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/right-arrow.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 855 [image/gif]
+Saving to: ‘successful-lisp/gifs/right-arrow.gif’
+
+     0K                                                       100% 1.73G=0s
+
+2024-09-06 11:55:32 (1.73 GB/s) - ‘successful-lisp/gifs/right-arrow.gif’ saved [855/855]
+
+--2024-09-06 11:55:32--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/right-arrow-bar.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 864 [image/gif]
+Saving to: ‘successful-lisp/gifs/right-arrow-bar.gif’
+
+     0K                                                       100% 1.83G=0s
+
+2024-09-06 11:55:32 (1.83 GB/s) - ‘successful-lisp/gifs/right-arrow-bar.gif’ saved [864/864]
+
+--2024-09-06 11:55:32--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/equivalent.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 843 [image/gif]
+Saving to: ‘successful-lisp/gifs/equivalent.gif’
+
+     0K                                                       100% 2.53G=0s
+
+2024-09-06 11:55:32 (2.53 GB/s) - ‘successful-lisp/gifs/equivalent.gif’ saved [843/843]
+
+--2024-09-06 11:55:32--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/dot.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 842 [image/gif]
+Saving to: ‘successful-lisp/gifs/dot.gif’
+
+     0K                                                       100% 1.67G=0s
+
+2024-09-06 11:55:33 (1.67 GB/s) - ‘successful-lisp/gifs/dot.gif’ saved [842/842]
+
+--2024-09-06 11:55:33--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/return.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 854 [image/gif]
+Saving to: ‘successful-lisp/gifs/return.gif’
+
+     0K                                                       100% 2.57G=0s
+
+2024-09-06 11:55:33 (2.57 GB/s) - ‘successful-lisp/gifs/return.gif’ saved [854/854]
+
+--2024-09-06 11:55:33--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/double-right-arrow.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 853 [image/gif]
+Saving to: ‘successful-lisp/gifs/double-right-arrow.gif’
+
+     0K                                                       100% 3.06G=0s
+
+2024-09-06 11:55:33 (3.06 GB/s) - ‘successful-lisp/gifs/double-right-arrow.gif’ saved [853/853]
+
+--2024-09-06 11:55:33--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/prefixed-names.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 3566 (3.5K) [image/gif]
+Saving to: ‘successful-lisp/gifs/prefixed-names.gif’
+
+     0K ...                                                   100% 4.49G=0s
+
+2024-09-06 11:55:33 (4.49 GB/s) - ‘successful-lisp/gifs/prefixed-names.gif’ saved [3566/3566]
+
+--2024-09-06 11:55:33--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/rename-package.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 3524 (3.4K) [image/gif]
+Saving to: ‘successful-lisp/gifs/rename-package.gif’
+
+     0K ...                                                   100% 4.90G=0s
+
+2024-09-06 11:55:33 (4.90 GB/s) - ‘successful-lisp/gifs/rename-package.gif’ saved [3524/3524]
+
+--2024-09-06 11:55:33--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/blank.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 840 [image/gif]
+Saving to: ‘successful-lisp/gifs/blank.gif’
+
+     0K                                                       100% 2.70G=0s
+
+2024-09-06 11:55:33 (2.70 GB/s) - ‘successful-lisp/gifs/blank.gif’ saved [840/840]
+
+--2024-09-06 11:55:33--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/2d-object-inheritance.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 1654 (1.6K) [image/gif]
+Saving to: ‘successful-lisp/gifs/2d-object-inheritance.gif’
+
+     0K .                                                     100% 4.97G=0s
+
+2024-09-06 11:55:33 (4.97 GB/s) - ‘successful-lisp/gifs/2d-object-inheritance.gif’ saved [1654/1654]
+
+--2024-09-06 11:55:33--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/2d-object-with-mixins.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 5576 (5.4K) [image/gif]
+Saving to: ‘successful-lisp/gifs/2d-object-with-mixins.gif’
+
+     0K .....                                                 100% 5.14G=0s
+
+2024-09-06 11:55:33 (5.14 GB/s) - ‘successful-lisp/gifs/2d-object-with-mixins.gif’ saved [5576/5576]
+
+--2024-09-06 11:55:33--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/list-box-and-arrow.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 2162 (2.1K) [image/gif]
+Saving to: ‘successful-lisp/gifs/list-box-and-arrow.gif’
+
+     0K ..                                                    100% 2.05G=0s
+
+2024-09-06 11:55:33 (2.05 GB/s) - ‘successful-lisp/gifs/list-box-and-arrow.gif’ saved [2162/2162]
+
+--2024-09-06 11:55:33--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/rplaca-rplacd.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 1757 (1.7K) [image/gif]
+Saving to: ‘successful-lisp/gifs/rplaca-rplacd.gif’
+
+     0K .                                                     100% 4.20G=0s
+
+2024-09-06 11:55:33 (4.20 GB/s) - ‘successful-lisp/gifs/rplaca-rplacd.gif’ saved [1757/1757]
+
+--2024-09-06 11:55:33--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/simple-gf-invocation.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 5040 (4.9K) [image/gif]
+Saving to: ‘successful-lisp/gifs/simple-gf-invocation.gif’
+
+     0K ....                                                  100% 7.01G=0s
+
+2024-09-06 11:55:33 (7.01 GB/s) - ‘successful-lisp/gifs/simple-gf-invocation.gif’ saved [5040/5040]
+
+--2024-09-06 11:55:33--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/multiple-inheritance-graph.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 1810 (1.8K) [image/gif]
+Saving to: ‘successful-lisp/gifs/multiple-inheritance-graph.gif’
+
+     0K .                                                     100% 2.91G=0s
+
+2024-09-06 11:55:34 (2.91 GB/s) - ‘successful-lisp/gifs/multiple-inheritance-graph.gif’ saved [1810/1810]
+
+--2024-09-06 11:55:34--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/array-class-hierarchy.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 2455 (2.4K) [image/gif]
+Saving to: ‘successful-lisp/gifs/array-class-hierarchy.gif’
+
+     0K ..                                                    100% 3.22G=0s
+
+2024-09-06 11:55:34 (3.22 GB/s) - ‘successful-lisp/gifs/array-class-hierarchy.gif’ saved [2455/2455]
+
+--2024-09-06 11:55:34--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/method-browser-list.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 3118 (3.0K) [image/gif]
+Saving to: ‘successful-lisp/gifs/method-browser-list.gif’
+
+     0K ...                                                   100% 3.42G=0s
+
+2024-09-06 11:55:34 (3.42 GB/s) - ‘successful-lisp/gifs/method-browser-list.gif’ saved [3118/3118]
+
+--2024-09-06 11:55:34--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/mcl-ift-create.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 3947 (3.9K) [image/gif]
+Saving to: ‘successful-lisp/gifs/mcl-ift-create.gif’
+
+     0K ...                                                   100% 3.57G=0s
+
+2024-09-06 11:55:34 (3.57 GB/s) - ‘successful-lisp/gifs/mcl-ift-create.gif’ saved [3947/3947]
+
+--2024-09-06 11:55:34--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/mcl-ift-blank.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 2037 (2.0K) [image/gif]
+Saving to: ‘successful-lisp/gifs/mcl-ift-blank.gif’
+
+     0K .                                                     100% 2.87G=0s
+
+2024-09-06 11:55:34 (2.87 GB/s) - ‘successful-lisp/gifs/mcl-ift-blank.gif’ saved [2037/2037]
+
+--2024-09-06 11:55:34--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/mcl-ift-pallete.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 3407 (3.3K) [image/gif]
+Saving to: ‘successful-lisp/gifs/mcl-ift-pallete.gif’
+
+     0K ...                                                   100% 3.65G=0s
+
+2024-09-06 11:55:34 (3.65 GB/s) - ‘successful-lisp/gifs/mcl-ift-pallete.gif’ saved [3407/3407]
+
+--2024-09-06 11:55:34--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/mcl-ift-button-edit.gif
+Connecting to dept-info.labri.fr (dept-info.labri.fr)|147.210.9.83|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4308 (4.2K) [image/gif]
+Saving to: ‘successful-lisp/gifs/mcl-ift-button-edit.gif’
+
+     0K ....                                                  100% 1.37G=0s
+
+2024-09-06 11:55:34 (1.37 GB/s) - ‘successful-lisp/gifs/mcl-ift-button-edit.gif’ saved [4308/4308]
+
+--2024-09-06 11:55:34--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/mcl-ift-finished.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 2656 (2.6K) [image/gif]
+Saving to: ‘successful-lisp/gifs/mcl-ift-finished.gif’
+
+     0K ..                                                    100% 3.86G=0s
+
+2024-09-06 11:55:34 (3.86 GB/s) - ‘successful-lisp/gifs/mcl-ift-finished.gif’ saved [2656/2656]
+
+--2024-09-06 11:55:34--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/mcl-ift-menubar-editor.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 5070 (5.0K) [image/gif]
+Saving to: ‘successful-lisp/gifs/mcl-ift-menubar-editor.gif’
+
+     0K ....                                                  100% 5.49G=0s
+
+2024-09-06 11:55:34 (5.49 GB/s) - ‘successful-lisp/gifs/mcl-ift-menubar-editor.gif’ saved [5070/5070]
+
+--2024-09-06 11:55:34--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/mcl-ift-menu-editor.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 6162 (6.0K) [image/gif]
+Saving to: ‘successful-lisp/gifs/mcl-ift-menu-editor.gif’
+
+     0K ......                                                100% 5.26G=0s
+
+2024-09-06 11:55:34 (5.26 GB/s) - ‘successful-lisp/gifs/mcl-ift-menu-editor.gif’ saved [6162/6162]
+
+--2024-09-06 11:55:34--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/mcl-ift-edit-palette.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 1568 (1.5K) [image/gif]
+Saving to: ‘successful-lisp/gifs/mcl-ift-edit-palette.gif’
+
+     0K .                                                     100% 2.61G=0s
+
+2024-09-06 11:55:34 (2.61 GB/s) - ‘successful-lisp/gifs/mcl-ift-edit-palette.gif’ saved [1568/1568]
+
+--2024-09-06 11:55:34--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/?C=N;O=D
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 6487 (6.3K) [text/html]
+Saving to: ‘successful-lisp/gifs/index.html?C=N;O=D.html’
+
+     0K ......                                                100% 4.83G=0s
+
+Last-modified header missing -- time-stamps turned off.
+2024-09-06 11:55:35 (4.83 GB/s) - ‘successful-lisp/gifs/index.html?C=N;O=D.html’ saved [6487/6487]
+
+--2024-09-06 11:55:35--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/?C=M;O=A
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 6487 (6.3K) [text/html]
+Saving to: ‘successful-lisp/gifs/index.html?C=M;O=A.html’
+
+     0K ......                                                100% 6.29G=0s
+
+Last-modified header missing -- time-stamps turned off.
+2024-09-06 11:55:35 (6.29 GB/s) - ‘successful-lisp/gifs/index.html?C=M;O=A.html’ saved [6487/6487]
+
+--2024-09-06 11:55:35--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/?C=S;O=A
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 6487 (6.3K) [text/html]
+Saving to: ‘successful-lisp/gifs/index.html?C=S;O=A.html’
+
+     0K ......                                                100% 4.48G=0s
+
+Last-modified header missing -- time-stamps turned off.
+2024-09-06 11:55:35 (4.48 GB/s) - ‘successful-lisp/gifs/index.html?C=S;O=A.html’ saved [6487/6487]
+
+--2024-09-06 11:55:35--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/?C=D;O=A
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 6487 (6.3K) [text/html]
+Saving to: ‘successful-lisp/gifs/index.html?C=D;O=A.html’
+
+     0K ......                                                100% 5.39G=0s
+
+Last-modified header missing -- time-stamps turned off.
+2024-09-06 11:55:35 (5.39 GB/s) - ‘successful-lisp/gifs/index.html?C=D;O=A.html’ saved [6487/6487]
+
+--2024-09-06 11:55:35--  https://dept-info.labri.fr/icons/image2.gif
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 309 [image/gif]
+Saving to: ‘successful-lisp/image2.gif’
+
+     0K                                                       100%  526M=0s
+
+2024-09-06 11:55:35 (526 MB/s) - ‘successful-lisp/image2.gif’ saved [309/309]
+
+--2024-09-06 11:55:35--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/?C=N;O=A
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 6487 (6.3K) [text/html]
+Saving to: ‘successful-lisp/gifs/index.html?C=N;O=A.html’
+
+     0K ......                                                100% 6.04G=0s
+
+Last-modified header missing -- time-stamps turned off.
+2024-09-06 11:55:35 (6.04 GB/s) - ‘successful-lisp/gifs/index.html?C=N;O=A.html’ saved [6487/6487]
+
+--2024-09-06 11:55:35--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/?C=M;O=D
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 6487 (6.3K) [text/html]
+Saving to: ‘successful-lisp/gifs/index.html?C=M;O=D.html’
+
+     0K ......                                                100% 5.75G=0s
+
+Last-modified header missing -- time-stamps turned off.
+2024-09-06 11:55:35 (5.75 GB/s) - ‘successful-lisp/gifs/index.html?C=M;O=D.html’ saved [6487/6487]
+
+--2024-09-06 11:55:35--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/?C=S;O=D
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 6487 (6.3K) [text/html]
+Saving to: ‘successful-lisp/gifs/index.html?C=S;O=D.html’
+
+     0K ......                                                100% 4.51G=0s
+
+Last-modified header missing -- time-stamps turned off.
+2024-09-06 11:55:35 (4.51 GB/s) - ‘successful-lisp/gifs/index.html?C=S;O=D.html’ saved [6487/6487]
+
+--2024-09-06 11:55:35--  https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/gifs/?C=D;O=D
+Reusing existing connection to dept-info.labri.fr:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 6487 (6.3K) [text/html]
+Saving to: ‘successful-lisp/gifs/index.html?C=D;O=D.html’
+
+     0K ......                                                100% 5.65G=0s
+
+Last-modified header missing -- time-stamps turned off.
+2024-09-06 11:55:35 (5.65 GB/s) - ‘successful-lisp/gifs/index.html?C=D;O=D.html’ saved [6487/6487]
+
+FINISHED --2024-09-06 11:55:35--
+Total wall clock time: 10s
+Downloaded: 109 files, 829K in 0.6s (1.26 MB/s)
+Converting links in successful-lisp/chapter03-12.html... 21.
+21-0
+Converting links in successful-lisp/chapter10.html... 7.
+7-0
+Converting links in successful-lisp/index.html?C=D;O=A.html... 127.
+126-1
+Converting links in successful-lisp/index.html?C=N;O=D.html... 127.
+126-1
+Converting links in successful-lisp/chapter03-11.html... 63.
+63-0
+Converting links in successful-lisp/chapter03-08.html... 23.
+23-0
+Converting links in successful-lisp/chapter09.html... 4.
+4-0
+Converting links in successful-lisp/chapter34.html... 4.
+4-0
+Converting links in successful-lisp/copyright.html... 4.
+4-0
+Converting links in successful-lisp/index.html?C=N;O=A.html... 127.
+126-1
+Converting links in successful-lisp/chapter03-07.html... 25.
+25-0
+Converting links in successful-lisp/chapter08.html... 6.
+6-0
+Converting links in successful-lisp/chapter03-10.html... 174.
+174-0
+Converting links in successful-lisp/chapter33.html... 5.
+5-0
+Converting links in successful-lisp/index.html?C=S;O=A.html... 127.
+126-1
+Converting links in successful-lisp/chapter03-06.html... 9.
+9-0
+Converting links in successful-lisp/chapter07.html... 14.
+14-0
+Converting links in successful-lisp/chapter32.html... 11.
+11-0
+Converting links in successful-lisp/foreword.html... 4.
+4-0
+Converting links in successful-lisp/gifs/index.html?C=M;O=D.html... 59.
+59-0
+Converting links in successful-lisp/chapter03-05.html... 37.
+37-0
+Converting links in successful-lisp/chapter06.html... 7.
+7-0
+Converting links in successful-lisp/chapter31.html... 5.
+5-0
+Converting links in successful-lisp/chapter03-04.html... 45.
+45-0
+Converting links in successful-lisp/chapter05.html... 7.
+7-0
+Converting links in successful-lisp/chapter30.html... 7.
+7-0
+Converting links in successful-lisp/chapter29.html... 5.
+5-0
+Converting links in successful-lisp/chapter03-03.html... 84.
+84-0
+Converting links in successful-lisp/chapter04.html... 22.
+22-0
+Converting links in successful-lisp/gifs/index.html?C=M;O=A.html... 59.
+59-0
+Converting links in successful-lisp/chapter28.html... 5.
+5-0
+Converting links in successful-lisp/chapter03-02.html... 57.
+57-0
+Converting links in successful-lisp/chapter03.html... 17.
+17-0
+Converting links in successful-lisp/chapter27.html... 7.
+7-0
+Converting links in successful-lisp/chapter03-01.html... 8.
+8-0
+Converting links in successful-lisp/chapter02.html... 37.
+32-5
+Converting links in successful-lisp/author.html... 2.
+2-0
+Converting links in successful-lisp/chapter26.html... 13.
+13-0
+Converting links in successful-lisp/chapter01.html... 4.
+4-0
+Converting links in successful-lisp/cover.html... 4.
+4-0
+Converting links in successful-lisp/chapter25.html... 4.
+4-0
+Converting links in successful-lisp/chapter24.html... 4.
+4-0
+Converting links in successful-lisp/chapter23.html... 9.
+9-0
+Converting links in successful-lisp/gifs/index.html?C=D;O=D.html... 59.
+59-0
+Converting links in successful-lisp/introduction.html... 4.
+4-0
+Converting links in successful-lisp/gifs/index.html?C=N;O=D.html... 59.
+59-0
+Converting links in successful-lisp/chapter19.html... 5.
+5-0
+Converting links in successful-lisp/chapter22.html... 9.
+9-0
+Converting links in successful-lisp/index.html?C=M;O=D.html... 127.
+126-1
+Converting links in successful-lisp/chapter18.html... 5.
+5-0
+Converting links in successful-lisp/chapter21.html... 8.
+8-0
+Converting links in successful-lisp/gifs/index.html?C=S;O=D.html... 59.
+59-0
+Converting links in successful-lisp/about.html... 3.
+3-0
+Converting links in successful-lisp/urls.html... nothing to do.
+Converting links in successful-lisp/chapter17.html... 4.
+4-0
+Converting links in successful-lisp/chapter20.html... 9.
+9-0
+Converting links in successful-lisp/gifs/index.html?C=D;O=A.html... 59.
+59-0
+Converting links in successful-lisp/gifs/index.html?C=N;O=A.html... 59.
+59-0
+Converting links in successful-lisp/chapter16.html... 11.
+11-0
+Converting links in successful-lisp/index.html... 127.
+126-1
+Converting links in successful-lisp/index.html?C=M;O=A.html... 127.
+126-1
+Converting links in successful-lisp/chapter15.html... 8.
+8-0
+Converting links in successful-lisp/appendix-b.html... 3.
+3-0
+Converting links in successful-lisp/gifs/index.html?C=S;O=A.html... 59.
+59-0
+Converting links in successful-lisp/chapter14.html... 9.
+9-0
+Converting links in successful-lisp/appendix-a.html... 4.
+4-0
+Converting links in successful-lisp/credits.html... 4.
+4-0
+Converting links in successful-lisp/chapter13.html... 6.
+6-0
+Converting links in successful-lisp/dedication.html... 3.
+3-0
+Converting links in successful-lisp/index.html?C=D;O=D.html... 127.
+126-1
+Converting links in successful-lisp/chapter12.html... 6.
+6-0
+Converting links in successful-lisp/gifs/index.html... 59.
+59-0
+Converting links in successful-lisp/contents.html... 44.
+44-0
+Converting links in successful-lisp/chapter11.html... 11.
+11-0
+Converting links in successful-lisp/index.html?C=S;O=D.html... 127.
+126-1
+Converting links in successful-lisp/chapter03-09.html... 34.
+34-0
+Converting links in successful-lisp/acknowledgments.html... 4.
+4-0
+Converted links in 77 files in 0.02 seconds.

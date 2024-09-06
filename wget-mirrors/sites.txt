@@ -1,0 +1,1 @@
+./wget-template.sh 'https://dept-info.labri.fr/~strandh/Teaching/MTP/Common/David-Lamkins/' 5 successful-lisp
